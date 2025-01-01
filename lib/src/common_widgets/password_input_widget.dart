@@ -21,10 +21,10 @@ class PasswordInputWidget extends StatefulWidget {
 
 class _PasswordInputWidgetState extends State<PasswordInputWidget> {
   var _isHiddenPassword = true;
-
   void _showPassword() {
-    _isHiddenPassword = !_isHiddenPassword;
-    setState(() {});
+    setState(() {
+      _isHiddenPassword = !_isHiddenPassword;
+    });
   }
 
   @override
