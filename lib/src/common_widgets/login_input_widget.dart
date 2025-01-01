@@ -23,7 +23,7 @@ class LoginInputWidget extends StatelessWidget {
         filled: true,
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: themeData.canvasColor),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(15),
         ),
         border: OutlineInputBorder(
           borderSide: BorderSide(color: themeData.canvasColor),
