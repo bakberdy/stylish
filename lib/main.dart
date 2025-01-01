@@ -47,7 +47,7 @@ class AppTextStyles {
   static TextTheme getTextTheme() {
     return TextTheme(
       titleLarge: GoogleFonts.montserrat(
-          fontSize: 36, color: Colors.black, fontWeight: FontWeight.w800),
+          fontSize: 36, color: Colors.black, fontWeight: FontWeight.w700),
       titleMedium: GoogleFonts.montserrat(
           fontSize: 24, color: Colors.black, fontWeight: FontWeight.w800),
       bodySmall:
