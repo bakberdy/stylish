@@ -13,15 +13,23 @@ class LoadingScreen extends StatefulWidget {
 class _LoadingScreenState extends State<LoadingScreen> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 2),(){
-    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>const OnboardScreen()), (Route<dynamic> route) => false );
-    // TODO: implement initState
+    Future.delayed(
+      const Duration(seconds: 2),
+    ).then((e) {
+      if (mounted) {
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => const OnboardScreen()),
+            (Route<dynamic> route) => false);
+      }
+    });
+
     super.initState();
-  });
   }
+
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       body: Center(
         child: SvgPicture.asset("assets/images/loading_screen_img/logo.svg"),
       ),

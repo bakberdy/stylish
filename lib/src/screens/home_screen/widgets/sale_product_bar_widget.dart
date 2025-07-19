@@ -61,9 +61,11 @@ class _SaleProductsBarState extends State<SaleProductsBar> {
                 top: 120,
                 right: 20,
                 child: SizedBox(
-                  height: 60,
-                  width: 60,
-                  child: FloatingActionButton(
+                    height: 60,
+                    width: 60,
+                    child: FloatingActionButton(
+                      heroTag:
+                          '${widget.title}_scrollButton', // любой уникальный tag
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                       backgroundColor: Colors.white.withOpacity(0.9),
@@ -81,13 +83,11 @@ class _SaleProductsBarState extends State<SaleProductsBar> {
                           );
                         });
                       },
-                      child: const Icon(CupertinoIcons.right_chevron)),
-                ))
+                      child: const Icon(CupertinoIcons.right_chevron),
+                    )))
           ],
         ),
       ],
     );
   }
 }
-
-

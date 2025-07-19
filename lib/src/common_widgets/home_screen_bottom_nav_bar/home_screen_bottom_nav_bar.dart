@@ -36,7 +36,7 @@ class _HomeScreenBottomNavigationBarState
       resizeToAvoidBottomInset: false,
       body: pages[_selectedIndex],
       bottomNavigationBar: Container(
-        height: 60,
+        // height: 60,
         color: Colors.white,
         child: BottomNavigationBar(
           backgroundColor: Colors.white,
@@ -49,7 +49,9 @@ class _HomeScreenBottomNavigationBarState
           type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),  label: "Home",),
+              icon: Icon(Icons.home_outlined),
+              label: "Home",
+            ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.favorite_border), label: "WishList"),
             BottomNavigationBarItem(

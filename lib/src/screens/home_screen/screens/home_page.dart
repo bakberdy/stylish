@@ -60,36 +60,29 @@ class HomePage extends StatelessWidget {
               ),
               Consumer<HomeScreenViewModel>(
                 builder: (context, viewModel, child) {
-                  return SaleProductsBar(
-                    items: viewModel.itemsInSale,
-                    title: 'New Items',
+                  return Column(
+                    children: [
+                      SaleProductsBar(
+                        items: viewModel.itemsInSale,
+                        title: 'New Items',
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SaleProductsBar(
+                        items: viewModel.itemsInSale,
+                        title: 'Popular Items',
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SaleProductsBar(
+                        items: viewModel.itemsInSale,
+                        title: 'Recommended',
+                      ),
+                    ],
                   );
                 },
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Consumer<HomeScreenViewModel>(
-                builder: (context, viewModel, child) {
-                  return SaleProductsBar(
-                    items: viewModel.itemsInSale,
-                    title: 'New Items',
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Consumer<HomeScreenViewModel>(
-                builder: (context, viewModel, child) {
-                  return SaleProductsBar(
-                    items: viewModel.itemsInSale,
-                    title: 'New Items',
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20,
               ),
               const SizedBox(
                 height: 50,
